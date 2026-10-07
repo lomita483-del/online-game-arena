@@ -14,13 +14,144 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      game_messages: {
+        Row: {
+          body: string
+          created_at: string
+          display_name: string
+          id: string
+          location: string
+          user_id: string
+        }
+        Insert: {
+          body: string
+          created_at?: string
+          display_name: string
+          id?: string
+          location: string
+          user_id: string
+        }
+        Update: {
+          body?: string
+          created_at?: string
+          display_name?: string
+          id?: string
+          location?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      game_profiles: {
+        Row: {
+          background: string
+          bio: string
+          bladder: number
+          business_balance: number
+          business_stock: number
+          business_type: string | null
+          career_level: number
+          career_xp: number
+          cash: number
+          created_at: string
+          display_name: string
+          energy: number
+          fun: number
+          hunger: number
+          hygiene: number
+          last_active_at: string
+          last_business_tick: string
+          last_updated_at: string
+          last_work_at: string
+          location: string
+          mood: string
+          rent_due_at: string
+          social: number
+          trait: string
+          user_id: string
+        }
+        Insert: {
+          background: string
+          bio?: string
+          bladder?: number
+          business_balance?: number
+          business_stock?: number
+          business_type?: string | null
+          career_level?: number
+          career_xp?: number
+          cash?: number
+          created_at?: string
+          display_name: string
+          energy?: number
+          fun?: number
+          hunger?: number
+          hygiene?: number
+          last_active_at?: string
+          last_business_tick?: string
+          last_updated_at?: string
+          last_work_at?: string
+          location?: string
+          mood?: string
+          rent_due_at?: string
+          social?: number
+          trait: string
+          user_id: string
+        }
+        Update: {
+          background?: string
+          bio?: string
+          bladder?: number
+          business_balance?: number
+          business_stock?: number
+          business_type?: string | null
+          career_level?: number
+          career_xp?: number
+          cash?: number
+          created_at?: string
+          display_name?: string
+          energy?: number
+          fun?: number
+          hunger?: number
+          hygiene?: number
+          last_active_at?: string
+          last_business_tick?: string
+          last_updated_at?: string
+          last_work_at?: string
+          location?: string
+          mood?: string
+          rent_due_at?: string
+          social?: number
+          trait?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_city_directory: { Args: never; Returns: Json }
+      perform_game_action: {
+        Args: { p_action: string; p_target?: string; p_transport?: string }
+        Returns: Json
+      }
+      send_game_message: {
+        Args: { p_body: string }
+        Returns: {
+          body: string
+          created_at: string
+          display_name: string
+          id: string
+          location: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "game_messages"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
     }
     Enums: {
       [_ in never]: never

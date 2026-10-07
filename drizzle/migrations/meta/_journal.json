@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791415558934,
+      "tag": "0000_create_imo_life_city_game",
+      "breakpoints": true
+    }
+  ]
 }

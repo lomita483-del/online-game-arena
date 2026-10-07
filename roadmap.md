@@ -1,0 +1,3 @@
+- [ ] Implement the Imo Life first-playable slice: account creation, character setup, Owerri exploration, needs, jobs, business, and chat/presence.
+- [ ] Apply secure persistent player/chat storage and server-authoritative actions; enable Cloud sign-in.
+- [ ] Verify the preview, end-to-end game entry, and current build status.
