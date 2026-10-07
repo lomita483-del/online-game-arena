@@ -64,6 +64,7 @@ export type Database = {
           last_work_at: string
           location: string
           mood: string
+          need_clock_seconds: number
           rent_due_at: string
           social: number
           trait: string
@@ -91,6 +92,7 @@ export type Database = {
           last_work_at?: string
           location?: string
           mood?: string
+          need_clock_seconds?: number
           rent_due_at?: string
           social?: number
           trait: string
@@ -118,6 +120,7 @@ export type Database = {
           last_work_at?: string
           location?: string
           mood?: string
+          need_clock_seconds?: number
           rent_due_at?: string
           social?: number
           trait?: string
