@@ -1,24 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ImoLifeGame } from "@/components/game/ImoLifeGame";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "IMO LIFE — Owerri Is Yours to Live" },
+      {
+        name: "description",
+        content:
+          "Build your life, make your money, and find your people in a shared, living Owerri. Welcome to IMO LIFE.",
+      },
+      { property: "og:title", content: "IMO LIFE — Owerri Is Yours to Live" },
+      {
+        property: "og:description",
+        content: "Your story begins in Owerri. The city is alive. Come make it yours.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: ImoLifeGame,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
