@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowUpRight, Banknote, BedDouble, BriefcaseBusiness, BusFront, Coffee, Compass, Heart, Home, MapPin, Menu, MessageCircle, ShoppingBag, Sparkles, Utensils, X } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Banknote, BriefcaseBusiness, Compass, Heart, Home, MapPin, Menu, MessageCircle, Sparkles, Utensils, X } from "lucide-react";
 
 type Place = {
   id: string; name: string; type: string; x: number; y: number; w: number; h: number;
@@ -62,7 +62,7 @@ function CityMap({ selected, onSelect }: { selected: string; onSelect: (id: stri
   </svg>;
 }
 
-function IsometricCity() {
+export function IsometricCity() {
   const [name, setName] = useState("Chidi");
   const [created, setCreated] = useState(false);
   const [selected, setSelected] = useState("market");
