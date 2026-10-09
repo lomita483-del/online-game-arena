@@ -142,3 +142,35 @@
     color: var(--color-foreground);
   }
 }
+
+
+/* New Owerri isometric city map */
+.city-map-shell {
+  isolation: isolate;
+}
+.city-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 310px;
+  overflow: visible;
+  transform: perspective(1200px) rotateX(3deg);
+  transform-origin: center center;
+}
+.map-building {
+  cursor: pointer;
+  outline: none;
+  transition: filter 180ms ease, opacity 180ms ease;
+}
+.map-building:hover {
+  filter: brightness(1.06) drop-shadow(0 8px 4px rgba(32, 60, 40, .12));
+}
+.map-building:focus-visible polygon {
+  stroke: #ffffff;
+  stroke-width: 4;
+}
+@media (max-width: 640px) {
+  .city-svg {
+    min-height: 250px;
+  }
+}

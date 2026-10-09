@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ImoLifeGame } from "@/components/game/ImoLifeGame";
+import { IsometricCity } from "@/components/game/IsometricCity";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IMO LIFE — Owerri Is Yours to Live" },
+      { title: "NEW OWERRI — Your Life, Your City" },
       {
         name: "description",
         content:
-          "Build your life, make your money, and find your people in a shared, living Owerri. Welcome to IMO LIFE.",
+          "Explore a tilted isometric city, discover places, work for money, and build your own story in this browser-based Nigerian life simulator.",
       },
-      { property: "og:title", content: "IMO LIFE — Owerri Is Yours to Live" },
+      { property: "og:title", content: "NEW OWERRI — Your Life, Your City" },
       {
         property: "og:description",
-        content: "Your story begins in Owerri. The city is alive. Come make it yours.",
+        content: "A new city. A fresh start. Your story is waiting.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: ImoLifeGame,
+  component: IsometricCity,
 });
