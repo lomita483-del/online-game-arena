@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "IMO LIFE — Owerri Is Yours to Live" },
+      { name: "description", content: "Build your life, earn money, explore Owerri, and meet your people in Imo Life, a free browser-based life simulator." },
+      { name: "author", content: "Imo Life" },
+      { property: "og:title", content: "IMO LIFE — Owerri Is Yours to Live" },
+      { property: "og:description", content: "Your story begins in Owerri. Work, build a business, explore the city, and meet other players." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      
     ],
     links: [
       {
